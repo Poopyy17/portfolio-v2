@@ -4,9 +4,11 @@ import { Github, ExternalLink } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import project1 from '@/assets/project-1.png';
+import project2 from '@/assets/project-2.png';
 import project3 from '@/assets/project-3.png';
 import project4 from '@/assets/project-4.png';
 import project5 from '@/assets/project-5.png';
+import project6 from '@/assets/project-6.png';
 
 export default function ProjectsSection() {
   const ref = useRef(null);
@@ -15,40 +17,64 @@ export default function ProjectsSection() {
   // Dummy project data
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Vet Assist',
       description:
-        'Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication.',
+        'SaaS platform for veterinary clinics featuring multi-tenant architecture, integrated e-commerce, and HR/customer management.',
       image: project1,
+      hasCode: false,
+      hasLive: true,
+      codeLink: null,
+      liveLink: 'https://demo.vetassist.app',
     },
     {
-      title: 'Task Management App',
+      title: 'Multi-Tenant E-commerce',
       description:
-        'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+        'Scalable e-commerce platform supporting multiple vendors with isolated data, payment processing, and customizable storefronts.',
+      image: project2,
+      hasCode: true,
+      hasLive: false,
+      codeLink: 'https://github.com/Poopyy17/ERP',
+      liveLink: null,
+    },
+    {
+      title: 'Tax Transferral App',
+      description:
+        'Application for managing tax document transfers with secure file handling, automated processing, and compliance tracking.',
       image: project3,
+      hasCode: true,
+      hasLive: false,
+      codeLink: 'https://github.com/Poopyy17/taxtransfer1',
+      liveLink: null,
     },
     {
-      title: 'Weather Dashboard',
+      title: 'Rotary Club Las Piñas',
       description:
-        'Modern weather application with location-based forecasts, interactive maps, and detailed weather analytics using external APIs.',
+        'Professional branding and contact website showcasing the mission and activities of the Rotary Club Las Piñas chapter.',
       image: project4,
+      hasCode: true,
+      hasLive: true,
+      codeLink: 'https://github.com/Poopyy17/rotary',
+      liveLink: 'https://rotaryclublaspinas.com',
     },
     {
-      title: 'Social Media Dashboard',
+      title: 'Interactive Game Material',
       description:
-        'Analytics dashboard for social media management with data visualization, scheduling tools, and performance metrics.',
+        'Educational platform for teachers to create quarterly lessons with multimedia content and interactive games.',
       image: project5,
+      hasCode: true,
+      hasLive: true,
+      codeLink: 'https://github.com/Poopyy17/interactive',
+      liveLink: 'https://interactive-frontend-taupe.vercel.app',
     },
     {
-      title: 'Portfolio Website',
+      title: 'Unli-wings Kiosk App',
       description:
-        'Responsive portfolio website built with React and Framer Motion, featuring smooth animations and modern UI design.',
-      image: project1,
-    },
-    {
-      title: 'Chat Application',
-      description:
-        'Real-time chat application with WebSocket integration, file sharing, and group messaging capabilities.',
-      image: project3,
+        'Self-service kiosk application for restaurant ordering with intuitive touch interface and streamlined payment processing.',
+      image: project6,
+      hasCode: true,
+      hasLive: false,
+      codeLink: 'https://github.com/Poopyy17/UnliWIngs',
+      liveLink: null,
     },
   ];
 
@@ -91,7 +117,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-16 md:py-32">
       <div className="container mx-auto px-6">
         <motion.div
-          className="text-center mb-12 md:mb-20"
+          className="text-center mb-12 md:mb-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
@@ -103,6 +129,13 @@ export default function ProjectsSection() {
           >
             FEATURED PROJECTS
           </motion.h2>
+          <motion.p
+            className="text-gray-400 text-lg max-w-2xl mx-auto"
+            variants={titleVariants}
+          >
+            A showcase of my recent work spanning full-stack development, SaaS
+            platforms, and interactive applications.
+          </motion.p>
         </motion.div>
 
         <motion.div
@@ -121,7 +154,7 @@ export default function ProjectsSection() {
                   <img
                     src={project.image || '/placeholder.svg'}
                     alt={project.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-fit group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardContent className="p-6 flex-1 flex flex-col">
@@ -132,22 +165,27 @@ export default function ProjectsSection() {
                     {project.description}
                   </p>
                   <div className="flex gap-3 mt-auto">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-sm text-white"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-sm text-white"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live
-                    </Button>
+                    {project.hasCode && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="text-sm text-white bg-transparent border-gray-600 hover:border-blue-400 hover:bg-blue-400/10 hover:text-blue-400 transition-all duration-300"
+                        onClick={() => window.open(project.codeLink, '_blank')}
+                      >
+                        <Github className="w-4 h-4" />
+                        Code
+                      </Button>
+                    )}
+                    {project.hasLive && (
+                      <Button
+                        size="sm"
+                        className="text-sm bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 transition-all duration-300 hover:scale-105"
+                        onClick={() => window.open(project.liveLink, '_blank')}
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Visit Live
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>

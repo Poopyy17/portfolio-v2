@@ -46,7 +46,7 @@ export default function FloatingElements() {
       {' '}
       {/* Thumbs Up - Bottom Left */}
       <motion.div
-        className="absolute bottom-64 left-15 md:bottom-80 md:left-3/4 lg:left-3/4"
+        className="absolute bottom-64 left-15 md:bottom-80 md:left-3/4 lg:left-3/4 hidden md:block"
         variants={floatingVariants}
         initial="initial"
         animate="animate"
@@ -62,7 +62,7 @@ export default function FloatingElements() {
       </motion.div>{' '}
       {/* Fire - Bottom Left Lower */}
       <motion.div
-        className="absolute bottom-30 left-25 md:bottom-16 md:left-1/3 lg:left-1/3"
+        className="absolute bottom-30 left-25 md:bottom-16 md:left-1/3 lg:left-1/3 hidden md:block"
         variants={floatingVariants}
         initial="initial"
         animate="animate"
@@ -76,10 +76,10 @@ export default function FloatingElements() {
           variants={pulseVariants}
           whileHover={{ scale: 1.25, rotate: -10 }}
         />
-      </motion.div>
+      </motion.div>{' '}
       {/* Bottom Right Side - 2 elements */} {/* Circle - Bottom Right */}
       <motion.div
-        className="absolute bottom-64 right-18 md:bottom-80 md:right-3/4 lg:right-3/4"
+        className="absolute bottom-64 right-18 md:bottom-80 md:right-3/4 lg:right-3/4 hidden md:block"
         variants={rotateVariants}
         initial="initial"
         animate="animate"
@@ -96,7 +96,7 @@ export default function FloatingElements() {
       </motion.div>{' '}
       {/* Heart - Bottom Right Lower */}
       <motion.div
-        className="absolute bottom-30 right-25 md:bottom-16 md:right-1/3 lg:right-1/3"
+        className="absolute bottom-30 right-25 md:bottom-16 md:right-1/3 lg:right-1/3 hidden md:block"
         variants={floatingVariants}
         initial="initial"
         animate="animate"
