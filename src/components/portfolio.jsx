@@ -34,7 +34,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-950 text-white relative">
       {/* Vertical Grid Lines */}
-      <VerticalLines />
+      {/* <VerticalLines /> */}
       {/* Horizontal Section Separators */}
       <HorizontalLines />
       <Navigation onMenuOpen={() => setIsMenuOpen(true)} />

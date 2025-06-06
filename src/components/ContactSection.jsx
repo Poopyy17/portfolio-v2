@@ -87,7 +87,7 @@ export default function ContactSection() {
     <section id="contact" className="py-32 relative">
       {/* Background Grid Overlay - Hidden on mobile and tablet */}
       <div className="absolute inset-0 bg-gray-950 hidden lg:block">
-        <div className="absolute bottom-0 left-71 right-60 -top-8 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <div className="absolute bottom-0 left-0 right-0 top-14 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -100,10 +100,10 @@ export default function ContactSection() {
         >
           <motion.div variants={itemVariants}>
             <motion.h2
-              className="text-4xl md:text-6xl font-bold mb-8 tracking-tight text-white"
+              className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-white leading-tight"
               variants={titleVariants}
             >
-              Feel free to fill up your details, I will reach out to you asap
+              Feel free to fill up your details, I will reach out to you ASAP.
             </motion.h2>
           </motion.div>{' '}
           <motion.div variants={itemVariants}>

@@ -71,7 +71,7 @@ export default function MenuItems({ menuItems, onMenuClose }) {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full border border-gray-700 hover:bg-gray-800 opacity-0 group-hover:opacity-100 transition-opacity"
+            className="rounded-full border border-gray-700 hover:bg-gray-800 hover:text-white opacity-0 group-hover:opacity-100 transition-opacity"
             onClick={(e) => {
               e.stopPropagation(); // Prevent double-clicking
               handleItemClick(item.href);

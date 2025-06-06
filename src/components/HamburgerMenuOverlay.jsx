@@ -83,7 +83,7 @@ export default function HamburgerMenuOverlay({
                   variant="ghost"
                   size="icon"
                   onClick={onMenuClose}
-                  className="rounded-full border border-gray-700 hover:bg-gray-800"
+                  className="rounded-full border border-gray-700 hover:bg-gray-800 hover:text-white"
                 >
                   <X className="w-5 h-5" />
                 </Button>

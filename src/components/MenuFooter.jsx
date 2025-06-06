@@ -100,7 +100,12 @@ export default function MenuFooter({ socialLinks }) {
               <div className="p-2 bg-blue-500/10 rounded-md group-hover:bg-blue-500/20 transition-colors">
                 <Mail className="w-4 h-4 text-blue-400" />
               </div>
-              <p className="text-white font-medium">james.boac25@gmail.com</p>
+              <a
+                href="mailto:james.boac25@gmail.com"
+                className="text-white font-medium hover:text-blue-400 transition-colors cursor-pointer"
+              >
+                james.boac25@gmail.com
+              </a>
             </div>
           </div>
         </div>

@@ -23,11 +23,10 @@ export default function Navigation({ onMenuOpen }) {
           </div>
           <Button
             variant="ghost"
-            size="icon"
             onClick={onMenuOpen}
-            className="hover:bg-gray-800"
+            className="hover:bg-gray-800 hover:text-white"
           >
-            <Menu className="w-5 h-5" />
+            <Menu className="w-8 h-8" />
           </Button>
         </div>
       </div>

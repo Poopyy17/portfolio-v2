@@ -125,7 +125,7 @@ export default function HeroSection() {
                 document.body.removeChild(link);
               }}
             >
-              Resume
+              Download CV
             </Button>
             <Button
               variant="ghost"
