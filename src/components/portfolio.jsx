@@ -14,29 +14,6 @@ import Footer from './Footer';
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with modern design',
-      image: '/placeholder.svg?height=200&width=300',
-      github: '#',
-      live: '#',
-    },
-    {
-      title: 'AI Chat Application',
-      description: 'Real-time chat app with AI integration',
-      image: '/placeholder.svg?height=200&width=300',
-      github: '#',
-      live: '#',
-    },
-    {
-      title: 'Task Management Tool',
-      description: 'Collaborative project management platform',
-      image: '/placeholder.svg?height=200&width=300',
-      github: '#',
-      live: '#',
-    },
-  ];
   const menuItems = [
     { name: 'Home', number: '01', href: '#home' },
     { name: 'About Me', number: '02', href: '#about' },
@@ -46,10 +23,14 @@ export default function Portfolio() {
   ];
 
   const socialLinks = [
-    { name: 'GITHUB', href: '#' },
-    { name: 'FACEBOOK', href: '#' },
-    { name: 'LINKED IN', href: '#' },
+    { name: 'GITHUB', href: 'https://github.com/Poopyy17' },
+    { name: 'FACEBOOK', href: 'https://www.facebook.com/jamesboac17' },
+    {
+      name: 'LINKED IN',
+      href: 'https://www.linkedin.com/in/james-boac-05706420b',
+    },
   ];
+
   return (
     <div className="min-h-screen bg-gray-950 text-white relative">
       {/* Vertical Grid Lines */}
@@ -66,7 +47,7 @@ export default function Portfolio() {
       <HeroSection />
       <AboutSection />
       <TechStackSection />
-      <ProjectsSection projects={projects} />
+      <ProjectsSection />
       <ContactSection />
       <Footer />
       {/* Scroll to Top Button */}

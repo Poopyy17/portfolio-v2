@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 import MenuItems from './MenuItems';
 import MenuFooter from './MenuFooter';
+import logo from '@/assets/gradient.png';
 
 export default function HamburgerMenuOverlay({
   isMenuOpen,
@@ -28,19 +29,20 @@ export default function HamburgerMenuOverlay({
   const handleLetsTalkClick = () => {
     // Close the menu first
     onMenuClose();
-    
+
     // Small delay to allow menu animation to start, then scroll
     setTimeout(() => {
       const contactSection = document.querySelector('#contact');
       if (contactSection) {
-        contactSection.scrollIntoView({ 
+        contactSection.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
-          inline: 'nearest' 
+          inline: 'nearest',
         });
       }
     }, 100);
   };
+
   return (
     <AnimatePresence>
       {isMenuOpen && (
@@ -65,7 +67,11 @@ export default function HamburgerMenuOverlay({
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1, duration: 0.3 }}
             >
-              <div className="text-xl font-bold">portfolio.</div>              <div className="flex gap-4">
+              <div className="flex items-center justify-between cursor-default">
+                <img src={logo} alt="James Logo" className="h-8 w-auto" />
+                james.
+              </div>
+              <div className="flex gap-4">
                 <Button
                   variant="outline"
                   className="border-gray-700 bg-transparent text-white hover:bg-gray-800 hover:text-white rounded-full px-6"

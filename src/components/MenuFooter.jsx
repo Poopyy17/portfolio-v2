@@ -80,6 +80,8 @@ export default function MenuFooter({ socialLinks }) {
             <motion.a
               key={index}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
               whileHover={{ x: 5 }}
               transition={{ type: 'spring', stiffness: 300 }}
@@ -102,7 +104,8 @@ export default function MenuFooter({ socialLinks }) {
             </div>
           </div>
         </div>
-      </motion.div>{' '}      <motion.div variants={itemVariants}>
+      </motion.div>{' '}
+      <motion.div variants={itemVariants}>
         <h3 className="text-gray-400 mb-6">Stay connected with me</h3>{' '}
         <form className="space-y-4" onSubmit={handleSubmit}>
           {/* Hidden FormSubmit fields */}
@@ -113,7 +116,6 @@ export default function MenuFooter({ socialLinks }) {
           />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
-          
           <div>
             <Input
               name="email"
