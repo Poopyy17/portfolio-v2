@@ -5,13 +5,13 @@ export default function HorizontalLines() {
       <div className="absolute left-0 right-0 top-[95vh] h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
 
       {/* After About Section */}
-      <div className="absolute left-0 right-0 top-[170vh] h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
+      <div className="absolute left-0 right-0 top-[190vh] h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
 
       {/* After Tech Stack Section */}
-      <div className="absolute left-0 right-0 top-[315vh] h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
+      <div className="absolute left-0 right-0 top-[340vh] h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
 
       {/* After Projects Section */}
-      <div className="absolute left-0 right-0 top-[476vh] h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
+      <div className="absolute left-0 right-0 top-[500vh] h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
     </div>
   );
 }
