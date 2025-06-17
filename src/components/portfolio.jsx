@@ -36,7 +36,7 @@ export default function Portfolio() {
       {/* Vertical Grid Lines */}
       {/* <VerticalLines /> */}
       {/* Horizontal Section Separators */}
-      <HorizontalLines />
+      {/* <HorizontalLines /> */}
       <Navigation onMenuOpen={() => setIsMenuOpen(true)} />
       <HamburgerMenuOverlay
         isMenuOpen={isMenuOpen}
